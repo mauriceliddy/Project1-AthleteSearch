@@ -1,33 +1,29 @@
 package com.github.mauriceliddy.Project1.Model;
 
 public class UserAccount {
-    private String name;
-    private int id;
-    private String password;
 
+    private int id;
+    private String name;
+    private String password;
+  
 
     public UserAccount() {
     }
-    
+    public UserAccount(int id) {
+        this.id = id;
+    }
 
-    public UserAccount(String name, int id, String password) {
+    public UserAccount(int id,String name,  String password) {
         this.name = name;
         this.id = id;
         this.password = password;
     }
 
-    
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
-    }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
     public String getPassword() {
         return password;
@@ -36,7 +32,12 @@ public class UserAccount {
         this.password = password;
     }
 
-
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     @Override
     public String toString() {
         return "UserAccount [id=" + id + ", name=" + name + ", password=" + password + "]";

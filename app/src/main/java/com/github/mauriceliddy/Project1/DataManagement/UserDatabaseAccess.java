@@ -129,5 +129,13 @@ public class UserDatabaseAccess {
         users = uDao.getAll();
         return users;
     }
-    
+
+    public void addUser(UserAccount user){
+        accessDatabase();
+        uDao.insert(user);
+    }
+    public void deleteUser(UserAccount user){
+        accessDatabase();
+        uDao.delete(user);
+    }
 }

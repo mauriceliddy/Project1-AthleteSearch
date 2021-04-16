@@ -2,58 +2,55 @@ console.log("hello from javascript land")
 
 
 let uri = 'http://localhost:8080/app/refresh';
-let allPeople = [];
+let userAccounts = [];
 
-async function readIn() {
+async function readInAccounts() {
     let resp = await fetch(uri);
-    allPeople = await resp.json();
-    console.log(allPeople);
+    userAccounts = await resp.json();
+    console.log(userAccounts);
     //document.querySelector('#athtable').innerHTML = new
 }
-readIn();
-var x="";
-function update2(){
-    console.log("Some shit")
-   
-    for (i in allPeople) {
-        x+= "<h3>" + allPeople[i].name + " "+ allPeople[i].id+ "</h3>";
-        console.log(x);
+readInAccounts();
+
+
+
+function generateUserTable(){
+  function generateTableHead(table, data) {
+    let thead = table.createTHead();
+    let row = thead.insertRow();
+    for (let key of data) {
+      let th = document.createElement("th");
+      let text = document.createTextNode(key);
+      th.appendChild(text);
+      row.appendChild(th);
+    }
+  }
+  
+  function generateTable(table, data) {
+    for (let element of data) {
+      let row = table.insertRow();
+      for (key in element) {
+        let cell = row.insertCell();
+        let text = document.createTextNode(element[key]);
+        cell.appendChild(text);
       }
-      document.querySelector("#athtable").innerHTML = x;
+    }
+  }
+  
+  let table = document.querySelector("table");
+  let data = Object.keys(userAccounts[0]);
+  generateTable(table, userAccounts);
+  generateTableHead(table, data);
 }
 
-
-
-// document.componentRegistry = {};
-// document.nextId = 0;
-
-// class Component {
-//     constructor() {
-//         this._id = ++document.nextId;
-//         document.componentRegistry[this._id] = this;
-//     }
+// var x="";
+// function showUsers(){
+//     for (i in userAccounts) {
+//         x+= "<h3>" + userAccounts[i].name + " "+ userAccounts[i].password+ "</h3>";
+//         console.log(x);
+//       }
+//       document.querySelector("#athtable").innerHTML = x;
 // }
 
-// class Athlete extends Component{
-//     constructor(props){
-//         super();
-//         this.state = {
-//             aname: props.aname,
-//             pass: props.pass
-//         }
-//     }
-// }
 
-// function render() {
-//     return `<div class="people">
-//                 <h2>${this.state.aname}</h2>
-//                 <h3>${this.state.pass}</h3>
-//             </div>`
-// }
-
-// function update() {
-//     document.querySelector('#athtable').innerHTML = document.componentRegistry[1].render()
-// }
-
-// document.querySelector('#athtable').innerHTML ="length of array: "+ allPeople.length;
 

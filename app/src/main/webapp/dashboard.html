@@ -1,5 +1,11 @@
 <html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="styling.css">
 
+</head>
 <body>
 
     <h2> Establish connection</h2>
@@ -14,19 +20,32 @@
         <li>Delete an account</li>
         <li>See master list of all workouts</li>
     </ol>
-    <p> List of current registered athletes:</p>
+    <h2> List of current registered athletes:</h2>
     <div id="athtable"></div>
     
-    <button onclick="update2()">Click me</button>
+    <button onclick="generateUserTable()">Click me</button>
+    <table>
+    </table>
 
-    <p> Please enter new athlete: </p>
-    <form action="http://localhost:8080/app/athletes" method="post">
+    <h3> You can add a new user here: </h3>
+    <form action="http://localhost:8080/app/users" method="post">
         <label for="name"> <b>Name</b></label><br>
         <input type="text" name="name" id="name" /><br>
+        <label for="password"> <b>Password</b></label><br>
+        <input type="password" name="password" id="password" /><br>
         <input type="submit">
     </form>
-    <h2> Now, hit submit to get all the athletes from the database</h2>
-    <form action="http://localhost:8080/app/athletes" method="get">
+
+    <h3> You can delete a user here: </h3>
+    <form action="http://localhost:8080/app/delete" method="post">
+        <label for="id"> <b>User Id Number</b></label><br>
+        <input type="text" name="id" id="id_number" /><br>
+        <label for="password"> <b>Password</b></label><br>
+        <input type="submit">
+    </form>
+
+    <h3> Now, hit submit to get all the athletes from the database</h3>
+    <form action="http://localhost:8080/app/users" method="get">
         <input type="submit">
     </form>
     <h2> How about seeing everyone? A refresh, if you will...</h2>
@@ -34,6 +53,7 @@
         <input type="submit">
     </form>
 
+   
     <script src="main.js"> </script>
 </body>
 

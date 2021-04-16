@@ -36,13 +36,12 @@ public class Refresh extends HttpServlet {
         System.out.println("Ran doGet() in refresh");
         
         UserDatabaseAccess uAccess = new UserDatabaseAccess();
-        
-         List<Athlete> athleteListFromDB = new ArrayList<>();
-         athleteListFromDB = uAccess.retrieveAthletesFromDb();
+         List<UserAccount> userAccounts = new ArrayList<>();
+         userAccounts = uAccess.getUsers();
          //Athlete athlete = new Athlete("Nick",3);
 
          ObjectMapper mapper = new ObjectMapper();
-         String jsonString = mapper.writeValueAsString(athleteListFromDB);
+         String jsonString = mapper.writeValueAsString(userAccounts);
         resp.setContentType("application/json");
         resp.getWriter().print(jsonString);
        // resp.getWriter().print(athleteListFromDB);
