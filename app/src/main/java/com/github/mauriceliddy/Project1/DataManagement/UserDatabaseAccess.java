@@ -51,7 +51,7 @@ public class UserDatabaseAccess {
             System.out.println("made it past driver manager");
             aDao= new AthleteDao(connection);
             wDao = new WorkoutDao(connection);
-            // uDao = new UserAccountDao(connection);
+            uDao = new UserAccountDao(connection);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -35,19 +35,18 @@ public class Refresh extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Ran doGet() in refresh");
         
-      
-    //     UserDatabaseAccess uAccess = new UserDatabaseAccess();
+        UserDatabaseAccess uAccess = new UserDatabaseAccess();
         
-    //      List<Athlete> athleteListFromDB = new ArrayList<>();
-    //      athleteListFromDB = uAccess.retrieveAthletesFromDb();
-    //      //Athlete athlete = new Athlete("Nick",3);
+         List<Athlete> athleteListFromDB = new ArrayList<>();
+         athleteListFromDB = uAccess.retrieveAthletesFromDb();
+         //Athlete athlete = new Athlete("Nick",3);
 
-    //      ObjectMapper mapper = new ObjectMapper();
-    //      String jsonString = mapper.writeValueAsString(athleteListFromDB);
-    //     resp.setContentType("application/json");
-    //     resp.getWriter().print(jsonString);
-    //    // resp.getWriter().print(athleteListFromDB);
-    //     //out.flush();
+         ObjectMapper mapper = new ObjectMapper();
+         String jsonString = mapper.writeValueAsString(athleteListFromDB);
+        resp.setContentType("application/json");
+        resp.getWriter().print(jsonString);
+       // resp.getWriter().print(athleteListFromDB);
+        //out.flush();
       
 
     }
