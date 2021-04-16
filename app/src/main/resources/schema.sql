@@ -3,6 +3,12 @@ aid serial primary key,
 aname text unique not null
 );
 
+CREATE TABLE userAccounts(
+userid serial primary key,
+aname text not null,
+pass text not null
+);
+
 CREATE TABLE workouts(
 wid serial primary key,
 athlete_id integer not null references athletes (aid), 

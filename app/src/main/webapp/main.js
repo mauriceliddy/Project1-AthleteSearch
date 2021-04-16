@@ -5,8 +5,10 @@ let allPeople = [];
 
 (async () => {
     let resp = await fetch(swapi);
-    allPeople = await resp.text();
+    allPeople = await resp.json();
     console.log(allPeople)
     // document.querySelector('#greeting').innerHTML =
     //     new PeopleComponent(allPeople.results[0]).render();
 })();
+
+console.log(allPeople.forEach.name);

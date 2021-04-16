@@ -25,11 +25,18 @@ public class UserDatabaseAccess {
     String username;
     WorkoutDao wDao;
     AthleteDao aDao;
+    UserAccountDao uDao;
+
+    public UserDatabaseAccess(){
+
+    }
 
     public void accessDatabase() {
+        System.out.println("calling accessdatabase..");
         try {
             FileInputStream fileStream = new FileInputStream("C:/VSCode Programs/Week4/Project-1/app/database.properties");
             properties.load(fileStream);
+            System.out.println("found a filestream");
         } catch (IOException e1) {
             e1.printStackTrace();
         }
@@ -41,8 +48,10 @@ public class UserDatabaseAccess {
         try {
             logger.info("Opening connection to the database...");
             connection = DriverManager.getConnection(url, username, password);
+            System.out.println("made it past driver manager");
             aDao= new AthleteDao(connection);
             wDao = new WorkoutDao(connection);
+            // uDao = new UserAccountDao(connection);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -113,13 +122,12 @@ public class UserDatabaseAccess {
         accessDatabase();
         aDao.insertAth(ath);
     }
-    public Connection getConnection() {
-        return connection;
-    }
 
-    public void setConnection(Connection connection) {
-        this.connection = connection;
+    List<UserAccount> users = new ArrayList<>();
+    public List<UserAccount> getUsers(){
+        accessDatabase();
+        users = uDao.getAll();
+        return users;
     }
-
     
 }

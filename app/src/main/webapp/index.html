@@ -1,41 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find an athlete login form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="styling.css">
 
-<html>
-    <body>
-
-        <h2> Establish connection</h2>
+</head>
+<body>
+    <!-- <h2> Establish connection</h2>
         <form action = "http://localhost:8080/app/refresh" method = "post">
         <input type = "submit">
-        </form>     
-        <h2>Welcome to the virtual coach!</h2>
-        <p> Please enter new athlete: </p>
-        <form action = "http://localhost:8080/app/athletes" method = "post">
-
-        <label for = "name"> <b>Name</b></label><br>
-        <input type = "text" name = "name" id = "name"/><br>
+        </form>      -->
+<div class="login-form">
+    <form action="login" method="post">
+        <h2 class="text-center">Log in</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" name = "name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name = "password" required="required">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>      
+    </form>
+    <!-- <h2> Now, hit submit to get all usernames and passwords from the database</h2>
+        <form action = "http://localhost:8080/app/login" method = "get">
         <input type = "submit">
-        </form>   
-    <h2> Now, hit submit to get all the athletes from the database</h2>
-        <form action = "http://localhost:8080/app/athletes" method = "get">
-        <input type = "submit">
         </form>     
-        <h2> How about seeing everyone? A refresh, if you will...</h2>
-        <form action = "http://localhost:8080/app/refresh" method = "get">
-        <input type = "submit">
-        </form>     
-        <script src = "main.js"> </script>
-    </body>
-    </html>
-    
-
-
-<!-- <html>
-    <body>
-        <h1>This is a heading</h1>
-        <a href = "test">Call test endpoint..</a>
-        <form method = "POST" action = "test">
-            Athlete Name <input name ="name"/>
-            <submit>Submit</submit> 
-        </form>
-    </body>
-    <script src = "main.js"> </script>
-</html> -->
+    -->
+</div>
+</body>
+</html>                                		
