@@ -21,11 +21,12 @@
         <li>See master list of all workouts</li>
     </ol>
     <h2> List of current registered athletes:</h2>
-    <div id="athtable"></div>
     
     <button onclick="generateUserTable()">Click me</button>
-    <table>
-    </table>
+    
+        <table id="athtable"></table>
+    
+    
 
     <h3> You can add a new user here: </h3>
     <form action="http://localhost:8080/app/users" method="post">
@@ -40,9 +41,14 @@
     <form action="http://localhost:8080/app/delete" method="post">
         <label for="id"> <b>User Id Number</b></label><br>
         <input type="text" name="id" id="id_number" /><br>
-        <label for="password"> <b>Password</b></label><br>
         <input type="submit">
     </form>
+
+    <h3> Click here to return a master list of all the workouts for this week</h3>
+
+    <table id="workoutstable"></table>
+    <button onclick="generateWorkoutTable()">Click here for workouts</button>
+    
 
     <h3> Now, hit submit to get all the athletes from the database</h3>
     <form action="http://localhost:8080/app/users" method="get">

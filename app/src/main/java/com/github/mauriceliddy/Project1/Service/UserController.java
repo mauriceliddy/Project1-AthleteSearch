@@ -75,4 +75,18 @@ public class UserController extends HttpServlet {
     }
 
    
+/*
+Doesnt work... doDelete() can't be used like this, so it's implemented in DeleteContoller class
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       System.out.println("Deleting user in doDelete..");
+        UserDatabaseAccess uAccess = new UserDatabaseAccess();
+       
+        String stringID = req.getParameter("id");
+        int intID = Integer.parseInt(stringID);
+        UserAccount uAccount = new UserAccount(intID);
+        uAccess.deleteUser(uAccount);
+        resp.sendRedirect("dashboard.html");
+    }
+    */
 }
