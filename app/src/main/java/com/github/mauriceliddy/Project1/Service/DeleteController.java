@@ -28,7 +28,7 @@ public class DeleteController extends HttpServlet {
         int intID = Integer.parseInt(stringID);
         UserAccount uAccount = new UserAccount(intID);
         uAccess.deleteUser(uAccount);
-        resp.sendRedirect("dashboard.html");
+        resp.sendRedirect("adminDashboard.html");
 
         // if ((name = req.getParameter("name")) != null) {
         //     resp.getWriter().println("\n" + "(POST)Welcome: " + name + " you handsome devil, also a silly goose!");

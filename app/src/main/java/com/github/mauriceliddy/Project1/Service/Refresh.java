@@ -56,7 +56,7 @@ System.out.println("dpPost for refresh");
     
         UserDatabaseAccess uAccess = new UserDatabaseAccess();
         uAccess.accessDatabase();
-    resp.sendRedirect("http://localhost:8080/app/dashboard.html");
+    resp.sendRedirect("http://localhost:8080/app/adminDashboard.html");
         // if ((name = req.getParameter("name")) != null) {
         //     resp.getWriter().println("\n" + "(POST)Welcome: " + name + " you handsome devil, also a silly goose!");
         // } else {

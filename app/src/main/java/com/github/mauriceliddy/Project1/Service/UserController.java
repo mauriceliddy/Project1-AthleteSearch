@@ -65,7 +65,7 @@ public class UserController extends HttpServlet {
         System.out.println("Just got the following name in: "+ name);
         UserAccount uAccount = new UserAccount(0,name,password);
         uAccess.addUser(uAccount);
-        resp.sendRedirect("dashboard.html");
+        resp.sendRedirect("userDashboard.html");
 
         // if ((name = req.getParameter("name")) != null) {
         //     resp.getWriter().println("\n" + "(POST)Welcome: " + name + " you handsome devil, also a silly goose!");

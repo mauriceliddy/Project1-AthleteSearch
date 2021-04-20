@@ -1,0 +1,61 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="styling.css">
+
+</head>
+<body>
+
+    <h2> Establish connection</h2>
+    <form action="http://localhost:8080/app/refresh" method="post">
+        <input type="submit">
+    </form>
+    <h2>Welcome User, to the virtual coach admin!</h2>
+    <p>You have basic access and hence have to the following functionalities</p>
+    <ol>
+        <li>See your workouts</li>
+        <li>Add a workout</li>
+        <li>Update your password</li>
+    </ol>
+    <h2> List of your workouts:</h2>
+    
+    <button onclick="generateUserTable()">Click me</button>
+    
+        <table id="athtable"></table>
+    
+    
+
+    <h3> You can add a new user here: </h3>
+    <form action="http://localhost:8080/app/users" method="post">
+        <label for="name"> <b>Name</b></label><br>
+        <input type="text" name="name" id="name" /><br>
+        <label for="password"> <b>Password</b></label><br>
+        <input type="password" name="password" id="password" /><br>
+        <input type="submit">
+    </form>
+
+    <h3> You can delete a user here: </h3>
+    <form action="http://localhost:8080/app/delete" method="post">
+        <label for="id"> <b>User Id Number</b></label><br>
+        <input type="text" name="id" id="id_number" /><br>
+        <input type="submit">
+    </form>
+
+    <h3> Click here to return a master list of all the workouts for this week</h3>
+
+    <table id="workoutstable"></table>
+    <button onclick="generateWorkoutTable()">Click here for workouts</button>
+    <h3> Click here for some shit</h3>
+    <form action="http://localhost:8080/app/userLogin" method="get">
+        
+        <input type="submit">
+    </form>
+    <script src="user.js"> </script>
+</body>
+
+</html>
+
+
+
