@@ -7,19 +7,19 @@ public class Workout {
     private int distance;
     private int gain;
     private double time;
-    private Athlete athlete;
+    private UserAccount user;
 
     public Workout(){
 
     }
 
-    public Workout(int wid, String day, int distance, int gain, double time, Athlete athlete) {
+    public Workout(int wid, String day, int distance, int gain, double time, UserAccount user) {
         this.wid = wid;
         this.day = day;
         this.distance = distance;
         this.gain = gain;
         this.time = time;
-        this.athlete = athlete;
+        this.user = user;
     }
 
     
@@ -55,22 +55,22 @@ public class Workout {
         this.time = time;
     }
 
-    public Athlete getAthlete() {
-        return athlete;
+    public UserAccount getUserAccount() {
+        return user;
     }
 
-    public void setAthlete(Athlete athlete) {
-        this.athlete = athlete;
+    public void setUserAccount(UserAccount user) {
+        this.user = user;
     }
 
     @Override
     public String toString() {
-        return "Workout [athlete=" + athlete + ", day=" + day + ", distance=" + distance + ", gain=" + gain + ", time="
+        return "Workout [user=" + user + ", day=" + day + ", distance=" + distance + ", gain=" + gain + ", time="
                 + time + "]";
     }
 
     public void printWorkoutDataFromDB(){
-        System.out.println("Workout:  [Workout ID: " +wid+ " athleteID: " + athlete.getId() + ", day=" + day + ", distance=" + distance + ", gain=" + gain + ", time="
+        System.out.println("Workout:  [Workout ID: " +wid+ " athleteID: " + user.getId() + ", day=" + day + ", distance=" + distance + ", gain=" + gain + ", time="
         + time + "]");
     }
     public int getWid() {

@@ -38,8 +38,7 @@ public class Refresh extends HttpServlet {
         UserDatabaseAccess uAccess = new UserDatabaseAccess();
          List<UserAccount> userAccounts = new ArrayList<>();
          userAccounts = uAccess.getUsers();
-         //Athlete athlete = new Athlete("Nick",3);
-
+        
          ObjectMapper mapper = new ObjectMapper();
          String jsonString = mapper.writeValueAsString(userAccounts);
         resp.setContentType("application/json");

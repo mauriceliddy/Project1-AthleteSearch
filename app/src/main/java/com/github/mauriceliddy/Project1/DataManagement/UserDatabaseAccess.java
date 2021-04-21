@@ -16,6 +16,9 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
+
+
 public class UserDatabaseAccess {
     private final Logger logger = LogManager.getLogger(this.getClass());
     Properties properties = new Properties();
@@ -67,30 +70,33 @@ public class UserDatabaseAccess {
         // Extract Athletes from masterlist and send to database to populate athlete
         // table first
         // Use set because I want to ignore any repeats
-        Set<Athlete> masterAthleteSet = new HashSet<>();
+        Set<UserAccount> masterAthleteSet = new HashSet<>();
         for (Workout wout : masterList) {
-            masterAthleteSet.add(wout.getAthlete());
+            masterAthleteSet.add(wout.getUserAccount());
+            //System.out.println(wout);
         }
-
+System.out.println("masterAthlete set:" + masterAthleteSet);
+System.out.println("end");
         // Insert each Athlete into the database
         // insertAth() method returns the athlete so we can update the Athlete ID in the
         // model based on value assigned by database
-        Set<Athlete> newSet = new HashSet<>();
-        for (Athlete ath : masterAthleteSet) {
-            ath = aDao.insertAth(ath); // insert into DB
+        Set<UserAccount> newSet = new HashSet<>();
+        for (UserAccount ath : masterAthleteSet) {
+            ath= uDao.insertUser(ath); // insert into DB
             newSet.add(ath); // add that Athlete with updated ID to Set for use later
         }
+
 
         // For each workout, set the athlete ID in the masterLst to match the athlete id
         // from the database
         for (Workout wout : masterList) {
-            for (Athlete ath : newSet) {
-                if (ath.getName().equals(wout.getAthlete().getName())) {
-                    wout.getAthlete().setId(ath.getId());
+            for (UserAccount ath : newSet) {
+                if (ath.getName().equals(wout.getUserAccount().getName())) {
+                    wout.getUserAccount().setId(ath.getId());
                 }
             }
         }
-
+System.out.println(masterList);
         // Finally, since the Athlete Ids are all fixed we can insert each workout into
         // the database accurately with no existing value errors
         for (Workout wout : masterList) {
@@ -116,6 +122,7 @@ public class UserDatabaseAccess {
         accessDatabase();
         wDao.clearTable();
         aDao.clearTable();
+        uDao.clearTable();
     }
 
     public void addAthlete(Athlete ath){
@@ -132,10 +139,35 @@ public class UserDatabaseAccess {
 
     public void addUser(UserAccount user){
         accessDatabase();
-        uDao.insert(user);
+        uDao.insertUser(user);
     }
     public void deleteUser(UserAccount user){
         accessDatabase();
+        wDao.deleteUserWorkouts(user.getId());
         uDao.delete(user);
+    }
+
+    public UserAccount getSingleUser(String uName){
+        accessDatabase();
+        UserAccount user = uDao.getUser(uName);
+        return user;
+    }
+
+    public List<Workout> getWorkouts(int id){
+        accessDatabase();
+        List<Workout> workouts = new ArrayList<>();
+
+        workouts = wDao.getWorkouts(id);
+        return workouts;
+    }
+
+    public void deleteWorkout(int wid){
+        accessDatabase();
+        wDao.deleteWorkout(wid);
+    
+    }
+    public void addWorkout(Workout wout){
+        accessDatabase();
+        wDao.insert(wout);
     }
 }

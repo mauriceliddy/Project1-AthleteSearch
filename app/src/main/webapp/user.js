@@ -15,7 +15,7 @@ readInAccounts();
 
   //Workouts
 
-  let workouturi = 'http://localhost:8080/app/workouts';
+  let workouturi = 'http://localhost:8080/app/userLogin';
 let workouts = [];
 
 async function readInWorkouts() {

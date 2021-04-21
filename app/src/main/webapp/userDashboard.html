@@ -12,46 +12,41 @@
     <form action="http://localhost:8080/app/refresh" method="post">
         <input type="submit">
     </form>
-    <h2>Welcome User, to the virtual coach admin!</h2>
+    <h2>Welcome User, to the virtual coach User Dashboard!</h2>
     <p>You have basic access and hence have to the following functionalities</p>
     <ol>
         <li>See your workouts</li>
         <li>Add a workout</li>
-        <li>Update your password</li>
+        <li>Delete a workout</li>
     </ol>
     <h2> List of your workouts:</h2>
     
-    <button onclick="generateUserTable()">Click me</button>
-    
-        <table id="athtable"></table>
-    
-    
-
-    <h3> You can add a new user here: </h3>
-    <form action="http://localhost:8080/app/users" method="post">
-        <label for="name"> <b>Name</b></label><br>
-        <input type="text" name="name" id="name" /><br>
-        <label for="password"> <b>Password</b></label><br>
-        <input type="password" name="password" id="password" /><br>
-        <input type="submit">
-    </form>
-
-    <h3> You can delete a user here: </h3>
-    <form action="http://localhost:8080/app/delete" method="post">
-        <label for="id"> <b>User Id Number</b></label><br>
-        <input type="text" name="id" id="id_number" /><br>
-        <input type="submit">
-    </form>
-
-    <h3> Click here to return a master list of all the workouts for this week</h3>
-
     <table id="workoutstable"></table>
     <button onclick="generateWorkoutTable()">Click here for workouts</button>
-    <h3> Click here for some shit</h3>
-    <form action="http://localhost:8080/app/userLogin" method="get">
-        
-        <input type="submit">
-    </form>
+    <!-- <button onclick="generateUserTable()">Click me</button>
+     -->
+        <!-- <table id="athtable"></table> -->
+    
+        <h3> You can delete a workout here: </h3>
+        <form action="http://localhost:8080/app/deleteWorkout" method="post">
+            <label for="wid"> <b>Workout ID (wid)</b></label><br>
+            <input type="text" name="wid" id="id_number" /><br>
+            <input type="submit">
+        </form>
+
+        <h3> You can add a workout here: </h3>
+        <form action="http://localhost:8080/app/userLogin" method="post">
+            <label for="day"> <b>Day</b></label><br>
+            <input type="text" name="day" id="day" /><br>
+            <label for="distance"> <b>Distance</b></label><br>
+            <input type="number" name="distance" id="distance" /><br>
+            <label for="gain"> <b>Gain</b></label><br>
+            <input type="number" name="gain" id="gain" /><br>
+            <label for="time"> <b>Time</b></label><br>
+            <input type="number" name="time" id="time" /><br>
+            <input type="submit">
+        </form>    
+
     <script src="user.js"> </script>
 </body>
 

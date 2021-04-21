@@ -16,15 +16,16 @@ public class DataInput {
             sc.useDelimiter(","); // sets the delimiter pattern
             while (sc.hasNext()) // returns a boolean value
             {
-                Athlete athlete = new Athlete();
+                UserAccount athlete = new UserAccount();
                 athlete.setName(sc.next().replaceAll("\\P{Print}", ""));
                 athlete.setId(Integer.parseInt(sc.next()));
+                athlete.setPassword(sc.next().replaceAll("\\P{Print}", ""));
                 Workout workout = new Workout();
                 workout.setDay(sc.next());
                 workout.setDistance(Integer.parseInt(sc.next()));
                 workout.setGain(Integer.parseInt(sc.next()));
                 workout.setTime(Double.parseDouble(sc.next()));
-                workout.setAthlete(athlete);
+                workout.setUserAccount(athlete);
                 masterList.add(workout);
             }
             sc.close(); // closes the scanner

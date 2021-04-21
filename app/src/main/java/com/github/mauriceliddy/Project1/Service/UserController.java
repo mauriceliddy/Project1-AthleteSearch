@@ -41,8 +41,8 @@ public class UserController extends HttpServlet {
         
          uAccess.sendCSVDataToDatabase(masterList);
 
-         List<Athlete> athleteListFromDB = new ArrayList<>();
-         athleteListFromDB = uAccess.retrieveAthletesFromDb();
+         List<UserAccount> athleteListFromDB = new ArrayList<>();
+         athleteListFromDB = uAccess.getUsers();
          //Athlete athlete = new Athlete("Nick",3);
 
         resp.setContentType("application/json");
@@ -65,7 +65,7 @@ public class UserController extends HttpServlet {
         System.out.println("Just got the following name in: "+ name);
         UserAccount uAccount = new UserAccount(0,name,password);
         uAccess.addUser(uAccount);
-        resp.sendRedirect("userDashboard.html");
+        resp.sendRedirect("adminDashboard.html");
 
         // if ((name = req.getParameter("name")) != null) {
         //     resp.getWriter().println("\n" + "(POST)Welcome: " + name + " you handsome devil, also a silly goose!");

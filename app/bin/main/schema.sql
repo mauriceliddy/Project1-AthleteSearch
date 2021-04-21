@@ -11,7 +11,7 @@ pass text not null
 
 CREATE TABLE workouts(
 wid serial primary key,
-athlete_id integer not null references athletes (aid), 
+athlete_id integer not null references userAccounts (userid), 
 wout_day text not null,
 distance integer not null,
 gain integer not null,

@@ -20,8 +20,8 @@ public class UserAccountDao implements DAO<UserAccount>{
         this.connection = connection;
     }
     
-    @Override
-    public void insert(UserAccount user) {
+    
+    public UserAccount insertUser(UserAccount user) {
         
         try {
             System.out.println("adding user now");
@@ -38,6 +38,7 @@ public class UserAccountDao implements DAO<UserAccount>{
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
+        return user;
         
     }
 
@@ -87,10 +88,41 @@ public class UserAccountDao implements DAO<UserAccount>{
 
     @Override
     public void clearTable() {
+        try {
+            PreparedStatement pStatement = connection.prepareStatement("delete from useraccounts");
+            pStatement.execute();
+        } catch (SQLException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        
+    }
+
+    @Override
+    public void insert(UserAccount e) {
         // TODO Auto-generated method stub
         
     }
 
-  
+  public UserAccount getUser(String uName){
+    UserAccount user = new UserAccount();
+    
+    try {
+        pStatement = connection.prepareStatement("select * from useraccounts where aname = ?");
+        pStatement.setString(1, uName);
+        ResultSet rSet = pStatement.executeQuery();
+        while(rSet.next()){
+            user.setId(rSet.getInt("userid"));
+            user.setName(rSet.getString("aname"));
+            user.setPassword(rSet.getString("pass"));
+            System.out.println("Single user from database: "+ user);
+        }
+
+    } catch (SQLException e) {
+
+        e.printStackTrace();
+    }
+    return user;
+  }
     
 }
