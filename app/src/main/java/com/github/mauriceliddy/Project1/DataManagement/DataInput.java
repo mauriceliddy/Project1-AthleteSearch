@@ -20,6 +20,7 @@ public class DataInput {
                 athlete.setName(sc.next().replaceAll("\\P{Print}", ""));
                 athlete.setId(Integer.parseInt(sc.next()));
                 athlete.setPassword(sc.next().replaceAll("\\P{Print}", ""));
+             
                 Workout workout = new Workout();
                 workout.setDay(sc.next());
                 workout.setDistance(Integer.parseInt(sc.next()));

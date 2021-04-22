@@ -43,9 +43,6 @@ public class Refresh extends HttpServlet {
          String jsonString = mapper.writeValueAsString(userAccounts);
         resp.setContentType("application/json");
         resp.getWriter().print(jsonString);
-       // resp.getWriter().print(athleteListFromDB);
-        //out.flush();
-      
 
     }
 

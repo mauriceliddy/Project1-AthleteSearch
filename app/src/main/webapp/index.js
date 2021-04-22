@@ -6,6 +6,6 @@ async function readInAccounts() {
     let resp = await fetch(uri);
     userAccounts = await resp.json();
     console.log(userAccounts);
-    //document.querySelector('#athtable').innerHTML = new
+
 }
 readInAccounts();

@@ -3,16 +3,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-<link rel="stylesheet" href="styling.css">
+<link rel="stylesheet" href="admin.css">
 
 </head>
 <body>
 
-    <h2> Establish connection</h2>
-    <form action="http://localhost:8080/app/refresh" method="post">
-        <input type="submit">
-    </form>
-    <h2>Welcome to the virtual coach admin dashbard!</h2>
+   
+    <h2>Welcome to the virtual coach admin dashboard!</h2>
     <p>You have access to the following functionalities</p>
     <ol>
         <li>See all athletes registered</li>
@@ -47,33 +44,12 @@
 
     <table id="workoutstable"></table>
     <button onclick="generateWorkoutTable()">Click here for workouts</button>
-    
-<!-- 
-    <h3> Now, hit submit to get all the athletes from the database</h3>
-    <form action="http://localhost:8080/app/users" method="get">
-        <input type="submit">
-    </form>
-    <h2> How about seeing everyone? A refresh, if you will...</h2>
-    <form action="http://localhost:8080/app/refresh" method="get">
-        <input type="submit">
-    </form> -->
-
    
+     <h4> Click here to head back to login page</h4>
+    <form action="http://localhost:8080/app" method="get">
+        <input type="submit">
+    </form> 
     <script src="main.js"> </script>
 </body>
 
 </html>
-
-
-
-<!-- <html>
-    <body>
-        <h1>This is a heading</h1>
-        <a href = "test">Call test endpoint..</a>
-        <form method = "POST" action = "test">
-            Athlete Name <input name ="name"/>
-            <submit>Submit</submit> 
-        </form>
-    </body>
-    <script src = "main.js"> </script>
-</html> -->

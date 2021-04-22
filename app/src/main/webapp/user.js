@@ -1,34 +1,30 @@
 console.log("hello from javascript land")
 
 
-let uri = 'http://localhost:8080/app/refresh';
-let userAccounts = [];
-
-async function readInAccounts() {
-    let resp = await fetch(uri);
-    userAccounts = await resp.json();
-    console.log(userAccounts);
-    //document.querySelector('#athtable').innerHTML = new
-}
-readInAccounts();
-
-
   //Workouts
 
-  let workouturi = 'http://localhost:8080/app/userLogin';
+  let workouturi = 'http://localhost:8080/app/userWorkouts';
 let workouts = [];
 
 async function readInWorkouts() {
     let resp = await fetch(workouturi);
     workouts = await resp.json();
     console.log(workouts);
-    //document.querySelector('#athtable').innerHTML = new
+    var uName= workouts[0].userAccount.name;
+console.log("Name in the fucntion:" + uName)
+document.querySelector('#uname').innerHTML = uName;
+    
 }
 readInWorkouts();
 
 
 function generateWorkoutTable(){
-  console.log("trying to create a table")
+  
+  if(workouts.length == 0){
+    alert("You don't have any workouts added, im afraid.You should run more");
+  }
+
+  
   function generateTableHead(table, data) {
     let thead = table.createTHead();
     let row = thead.insertRow();
@@ -58,6 +54,30 @@ function generateWorkoutTable(){
   generateTableHead(table, data);
 }
 
+function findWorkout(){
+  alert("Welcome to find a workout!");
+  var day = prompt("What type of workout are you looking for?");
+  var choice = prompt("Press: \n 1 for Distance\n2 for Gain\n3 for Time");
+  switch (choice) {
+    case 1:
+        var distance = prompt("How far do you want to run?");
+         var workoutType = "distance";
+        break;
+    case 2:
+        var gain = prompt("How much vertical gain do you want?");
+        workoutType = "gain";
+        break;
+    case 3:
+        var time = prompt("How much time do you want to run for in hours?");
+        workoutType = "time";
+        break;
+    }
+
+    findActualWorkout(workoutType, day, distance, gain, time);
+
+}
 
 
- 
+
+
+

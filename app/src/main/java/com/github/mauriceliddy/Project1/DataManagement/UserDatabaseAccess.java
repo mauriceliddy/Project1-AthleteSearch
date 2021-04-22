@@ -96,7 +96,6 @@ System.out.println("end");
                 }
             }
         }
-System.out.println(masterList);
         // Finally, since the Athlete Ids are all fixed we can insert each workout into
         // the database accurately with no existing value errors
         for (Workout wout : masterList) {

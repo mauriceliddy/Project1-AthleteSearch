@@ -3,8 +3,6 @@ plugins {
     id 'war'
 }
 
-apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
-
 repositories {
     mavenCentral()
 }
@@ -24,7 +22,3 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-gretty {
-    httpPort = 8080
-    contextPath = '/athleteSearch'
-}

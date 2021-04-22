@@ -1,7 +1,6 @@
 package com.github.mauriceliddy.Project1.Service;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,13 +20,6 @@ public class LoginController extends HttpServlet{
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(false);
-
-        if(session!=null){
-            String user = (String)session.getAttribute("user");
-            // do stuff here
-        }
-
         List<UserAccount> users = new ArrayList<>();
         System.out.println("Ran doGet() in login controller");
         UserDatabaseAccess uAccess = new UserDatabaseAccess();
@@ -41,7 +33,6 @@ public class LoginController extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
         String name = req.getParameter("name");
         System.out.println("Just got the following name in: "+ name);
         String password = req.getParameter("password");
@@ -64,21 +55,13 @@ public class LoginController extends HttpServlet{
             System.out.println("USer access is true!!");
             HttpSession session  = req.getSession();
             session.setAttribute("name", name);
-            //RequestDispatcher rd = req.getRequestDispatcher("/userLogin");
             RequestDispatcher rd = req.getRequestDispatcher("/userDashboard.html");
              rd.forward(req, resp);
-            //resp.sendRedirect("userDashboard.html");    
+             
             }
         else{
            
             resp.sendRedirect("/app");    
         }
-        //resp.sendRedirect("http://localhost:8080/app/");
-
-        // if ((name = req.getParameter("name")) != null) {
-        //     resp.getWriter().println("\n" + "(POST)Welcome: " + name + " you handsome devil, also a silly goose!");
-        // } else {
-        //     resp.getWriter().println("Post failed " + name);
-        // }
-    }
+}
 }
