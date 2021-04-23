@@ -1,0 +1,32 @@
+{
+  "name": "Project-1",
+  "version": "1.0.0",
+  "description": "Full stack Application for Athletes to search available workout data to see if there is someone to run with on a certain day. Includes main login page which then redriects user to either an admin page or basic user page",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javatures/Project1-Maurice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javatures/Project1-Maurice/issues"
+  },
+  "homepage": "https://github.com/javatures/Project1-Maurice#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "jest-fetch-mock": "^3.0.3"
+  },
+
+  "jest": {
+    "automock": false,
+    "setupFiles": ["./setupJest.js"]
+  }
+}

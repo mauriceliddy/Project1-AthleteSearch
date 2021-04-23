@@ -26,7 +26,7 @@ Full stack Application for Athletes to search available workout data to see if t
 - [x] README included
 - [x] Junit testing complete
 - [x] Integration(database) testing complete
-- [] JS Testing - 
+- [] JS Testing - Jest
 - [x] Log 4j Logging incorporated
 - [x] Pushed to GitHub
 - [x] Tomcat as application server
@@ -55,16 +55,18 @@ Full stack Application for Athletes to search available workout data to see if t
 - [x?] Session management
 
 ## Instructions for Use 
-- Initial welcome message followed by asking user to enter the day they would like to find a workout on.
-  Valid days are: Monday - Friday only  
-- User prompted to choose what type of workout he or she would like to search for:
-  - By Distance, in miles (press 1)
-  - By Vertical gain, in feet (press 2)
-  - By time, in hours (press 3)
-- Application will search available workout data and will return a suitable message if a match is found.
-  - For example "We foudn a workout: You should run with Maurice on Wednesday"
-  - If no match, app will return the message "Sorry, no one to run with this week"
-- Finally the app will prompt the user if he/she wants to save into the database.
-  - If "y", then the data saves into database and returns the values ot the console as a check
-  - If "n", then the program exits without persisting data to database
+- Login page for either admin or regular user
+- Initial user and workout data is loaded internally from csv file
+- Depending on user or admin credentials you will be routed to the appropriate landing page
+- For admin you will have access to:
+  - Can view all user’s workouts
+  - Can view all users and passwords
+  - Can add a user
+   -Can delete a workout
+- For User you ill have access to:
+  - View his/her individual workouts
+  - Delete a workout
+  - Add a workout
+   -Search for another athlete to run with
+
 

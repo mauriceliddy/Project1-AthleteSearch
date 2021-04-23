@@ -74,3 +74,87 @@
 [INFO ] 2021-04-22 10:58:00.436 [Test worker] UserDatabaseAccess - Opening connection to the database...
 [INFO ] 2021-04-22 10:58:00.504 [Test worker] ProcessData - User found a desired workout for this week
 [INFO ] 2021-04-22 10:58:00.510 [Test worker] ProcessData - No workout found for the user during this session
+[INFO ] 2021-04-22 16:33:34.531 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:34.696 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:34.956 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:34.992 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:35.013 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:35.228 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:33:35.301 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 16:33:35.308 [Test worker] ProcessData - No workout found for the user during this session
+[ERROR] 2021-04-22 16:44:07.836 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:44:08.039 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:44:08.283 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:44:08.311 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:44:08.331 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:44:08.549 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:44:08.607 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 16:44:08.612 [Test worker] ProcessData - No workout found for the user during this session
+[ERROR] 2021-04-22 16:46:04.893 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:46:05.055 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:46:05.335 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:46:05.377 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:46:05.403 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[ERROR] 2021-04-22 16:46:05.637 [Test worker] UserDatabaseAccess - Opening connection to the database...
+[INFO ] 2021-04-22 16:46:05.709 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 16:46:05.714 [Test worker] ProcessData - No workout found for the user during this session
+[ERROR] 2021-04-22 16:50:40.334 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:50:40.482 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:50:40.744 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:50:40.774 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:50:40.797 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:50:40.999 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 16:50:41.063 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 16:50:41.068 [Test worker] ProcessData - No workout found for the user during this session
+[ERROR] 2021-04-22 16:55:49.353 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:55:49.497 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:55:49.841 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:55:49.874 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:55:49.894 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 16:55:50.082 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 16:55:50.133 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 16:55:50.138 [Test worker] ProcessData - No workout found for the user during this session
+[ERROR] 2021-04-22 18:29:18.196 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:29:18.385 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:29:18.737 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:29:18.775 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:29:18.801 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:29:19.031 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:29:19.123 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 18:29:19.129 [Test worker] ProcessData - No workout found for the user during this session
+[INFO ] 2021-04-22 18:34:44.994 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:34:45.017 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:34:45.165 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:34:45.443 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:34:45.469 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:34:45.474 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:34:45.494 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:34:45.684 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:34:45.707 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:34:45.714 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:34:45.747 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 18:34:45.752 [Test worker] ProcessData - No workout found for the user during this session
+[INFO ] 2021-04-22 18:41:13.199 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:41:13.232 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:41:13.392 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:41:13.668 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:41:13.697 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:41:13.703 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:41:13.729 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:41:13.938 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:41:13.963 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:41:13.969 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:41:14.001 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 18:41:14.005 [Test worker] ProcessData - No workout found for the user during this session
+[INFO ] 2021-04-22 18:43:41.800 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:43:41.828 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:43:41.972 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:43:42.213 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:43:42.239 [Test worker] DataInput - ************************Reading in data from csv*****************
+[ERROR] 2021-04-22 18:43:42.245 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:43:42.265 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[ERROR] 2021-04-22 18:43:42.476 [Test worker] UserDatabaseAccess - Opening connection to the database...****
+[INFO ] 2021-04-22 18:43:42.500 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:43:42.505 [Test worker] DataInput - ************************Reading in data from csv*****************
+[INFO ] 2021-04-22 18:43:42.537 [Test worker] ProcessData - User found a desired workout for this week
+[INFO ] 2021-04-22 18:43:42.543 [Test worker] ProcessData - No workout found for the user during this session

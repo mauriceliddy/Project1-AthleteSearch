@@ -53,29 +53,15 @@ function generateWorkoutTable(){
   generateTable(table, workouts);
   generateTableHead(table, data);
 }
+  
+var user1 = {id:"1", name:"Maurice", color:"password"};
+var user2 = {id:"2", name:"Nick", color:"password2"};
+var user3 = {id:"3", name:"Burke", color:"password3"};
 
-function findWorkout(){
-  alert("Welcome to find a workout!");
-  var day = prompt("What type of workout are you looking for?");
-  var choice = prompt("Press: \n 1 for Distance\n2 for Gain\n3 for Time");
-  switch (choice) {
-    case 1:
-        var distance = prompt("How far do you want to run?");
-         var workoutType = "distance";
-        break;
-    case 2:
-        var gain = prompt("How much vertical gain do you want?");
-        workoutType = "gain";
-        break;
-    case 3:
-        var time = prompt("How much time do you want to run for in hours?");
-        workoutType = "time";
-        break;
-    }
+var users=[];
+users.push(user1,user2,user3);
 
-    findActualWorkout(workoutType, day, distance, gain, time);
 
-}
 
 
 

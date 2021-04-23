@@ -89,14 +89,24 @@ function generateWorkoutTable(){
   generateTableHead(table, data);
 }
 
-// var x="";
-// function showUsers(){
-//     for (i in userAccounts) {
-//         x+= "<h3>" + userAccounts[i].name + " "+ userAccounts[i].password+ "</h3>";
-//         console.log(x);
-//       }
-//       document.querySelector("#athtable").innerHTML = x;
-// }
 
+//For use in Javascript testing(Mock data)
 
-
+function checkWorkouts(number){
+  var wout1 = {id:"1", type:"distance", amount:31};
+  var wout2 = {id:"2", type:"gain", amount:3000};
+  var wout3 = {id:"3", type:"time", amount:5};
+  var workouts=[];
+  workouts.push(wout1,wout2,wout3);
+  
+  if(number ==1){
+  return workouts.length;
+  }
+  if(number ==2){
+    return workouts[1].amount;
+    }
+    
+  }
+  
+  
+  module.exports = {checkWorkouts};

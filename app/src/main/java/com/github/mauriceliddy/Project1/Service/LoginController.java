@@ -15,9 +15,13 @@ import javax.servlet.http.HttpSession;
 import com.github.mauriceliddy.Project1.DataManagement.UserDatabaseAccess;
 import com.github.mauriceliddy.Project1.Model.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @WebServlet("/login")
 public class LoginController extends HttpServlet{
-    
+   
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<UserAccount> users = new ArrayList<>();
@@ -31,7 +35,6 @@ public class LoginController extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       
         resp.setContentType("text/html");
         String name = req.getParameter("name");
         System.out.println("Just got the following name in: "+ name);
@@ -49,12 +52,17 @@ public class LoginController extends HttpServlet{
          }
 
         if(name.equals("admin")&& password.equals("admin")){
+         Logger logger = LogManager.getLogger(this.getClass());
+            logger.error("An Admin User just logged in");
            resp.sendRedirect("adminDashboard.html");    
         }
         else if(userAccess){
+            Logger logger = LogManager.getLogger(this.getClass());
+            logger.info("An regular user just logged in, the name was: "+ name);
             System.out.println("USer access is true!!");
             HttpSession session  = req.getSession();
             session.setAttribute("name", name);
+            
             RequestDispatcher rd = req.getRequestDispatcher("/userDashboard.html");
              rd.forward(req, resp);
              

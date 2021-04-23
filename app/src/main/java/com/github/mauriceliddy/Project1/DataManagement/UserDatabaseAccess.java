@@ -49,7 +49,7 @@ public class UserDatabaseAccess {
         username = properties.getProperty("CONNECTION_USERNAME");
 
         try {
-            logger.info("Opening connection to the database...");
+            logger.error("Opening connection to the database...****");
             connection = DriverManager.getConnection(url, username, password);
             System.out.println("made it past driver manager");
             aDao= new AthleteDao(connection);
