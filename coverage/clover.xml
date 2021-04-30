@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619184446882" clover="3.2.0">
-  <project timestamp="1619184446882" name="All files">
+<coverage generated="1619191564683" clover="3.2.0">
+  <project timestamp="1619191564683" name="All files">
     <metrics statements="72" coveredstatements="34" conditionals="4" coveredconditionals="3" methods="11" coveredmethods="5" elements="87" coveredelements="42" complexity="0" loc="72" ncloc="72" packages="1" files="2" classes="2"/>
     <file name="index.js" path="C:\VSCode Programs\Week4\Project-1\app\src\main\webapp\index.js">
       <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet{
-   
+    static final Logger logger = LogManager.getLogger(LoginController.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -52,13 +52,13 @@ public class LoginController extends HttpServlet{
          }
 
         if(name.equals("admin")&& password.equals("admin")){
-         Logger logger = LogManager.getLogger(this.getClass());
-            logger.error("An Admin User just logged in");
+        
+            logger.debug("**************An Admin User just logged in******************");
            resp.sendRedirect("adminDashboard.html");    
         }
         else if(userAccess){
-            Logger logger = LogManager.getLogger(this.getClass());
-            logger.info("An regular user just logged in, the name was: "+ name);
+          
+            logger.debug("***************An regular user just logged in, the name was: "+ name+"******************");
             System.out.println("USer access is true!!");
             HttpSession session  = req.getSession();
             session.setAttribute("name", name);
